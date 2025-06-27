@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header class="sticky-nav">
     <div class="container nav">
       <img src="logo.png" alt="Secure Email Logo" class="logo">
       <nav>
@@ -31,9 +31,16 @@
     <p>Your Trusted Guide to Email Security, Identity & Privacy</p>
   </section>
 
+  <section id="filter-bar" class="container">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="security">Security</button>
+    <button class="filter-btn" data-filter="identity">Identity</button>
+    <button class="filter-btn" data-filter="tools">Tools</button>
+  </section>
+
   <section id="blogs" class="container blog-grid">
     <!-- Blog cards -->
-    <div class="card">
+    <div class="card" data-category="security">
       <a href="what-is-secure-email.html">
         <img src="img/blog1.jpg" alt="Secure Email">
         <div class="card-content">
@@ -43,7 +50,7 @@
       </a>
     </div>
 
-    <div class="card">
+    <div class="card" data-category="tools">
       <a href="pgp-vs-smime.html">
         <img src="img/blog2.jpg" alt="PGP vs S/MIME">
         <div class="card-content">
@@ -52,7 +59,6 @@
         </div>
       </a>
     </div>
-
     <!-- More blog cards can be duplicated below -->
   </section>
 
@@ -74,5 +80,26 @@
   </footer>
 
   <script src="cookie-banner.js"></script>
+  <script>
+    // Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelector('.filter-btn.active').classList.remove('active');
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
