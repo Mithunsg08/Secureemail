@@ -1,0 +1,27 @@
+body {
+  background-color: #000;
+  color: #C0C0C0;
+  font-family: 'Fira Code', monospace;
+  margin: 0;
+  padding: 0;
+}
+.logo {
+  height: 80px;
+}
+header, footer {
+  padding: 20px;
+  text-align: center;
+  background: #111;
+  border-bottom: 1px solid #222;
+}
+.intro {
+  text-align: center;
+  margin: 50px;
+}
+a {
+  color: #1EE8B7;
+  text-decoration: none;
+}
+a:hover {
+  color: #00FFFF;
+}
