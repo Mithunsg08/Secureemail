@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://secureemail.blog/</loc></url>
-  <url><loc>https://secureemail.blog/blog/what-is-secure-email.html</loc></url>
-  <url><loc>https://secureemail.blog/blog/pgp-vs-smime.html</loc></url>
-  <url><loc>https://secureemail.blog/blog/top-secure-email-services.html</loc></url>
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://secureemail.blog/index.html</loc>
+  </url>
+
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://secureemail.blog/How-Secure-Is-Your-Email.html</loc>
+  </url>
+  <url>
+    <loc>https://secureemail.blog/what-is-secure-email.html</loc>
+  </url>
+  <url>
+    <loc>https://secureemail.blog/pgp-vs-smime.html</loc>
+  </url>
+
+  <!-- Static Pages -->
+  <url>
+    <loc>https://secureemail.blog/privacy.html</loc>
+  </url>
+  <url>
+    <loc>https://secureemail.blog/terms.html</loc>
+  </url>
+
 </urlset>
