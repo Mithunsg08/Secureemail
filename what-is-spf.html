@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn what SPF (Sender Policy Framework) is, how it protects your domain from spoofing, and how to set it up correctly." />
+  <meta name="keywords" content="SPF, Sender Policy Framework, email authentication, spoofing, secure email, DNS records" />
+  <meta name="author" content="Mithun" />
+  <title>What is SPF in Email and How to Set It Up</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/36c63d_050e5a885a20405cb3462c2593d18ce0~mv2.png" />
+  <style>
+    h1, h2, h3 { color: #00ffd5; }
+    a { color: #79afff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { width: 100%; max-width: 700px; margin: 20px auto; display: block; }
+    .credit { font-size: 0.9em; color: #aaa; text-align: center; }
+    ul { padding-left: 20px; }
+    pre {
+      background: #111;
+      color: #79afff;
+      padding: 1em;
+      border: 1px solid #444;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky-nav">
+    <div class="container nav">
+      <a href="index.html" class="logo-text">@SecureEmail</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#blogs">Articles</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container blog-post">
+    <h1>What is SPF in Email and How to Set It Up</h1>
+    <p class="author">By Mithun • Published on June 30, 2025</p>
+
+    <img src="https://www.esecurityplanet.com/wp-content/uploads/2023/06/eSP-SPF-2048x1586.png" alt="SPF email authentication diagram" />
+    <p class="credit">Image credit: esecurityplanet.com</p>
+
+    <p>Have you ever received an email that looked legitimate but wasn’t? <strong>SPF</strong> is one of the first lines of defense against such email spoofing. Let’s break down what it is and how to use it effectively.</p>
+
+    <h2>📌 What is SPF?</h2>
+    <p><strong>SPF (Sender Policy Framework)</strong> is an email validation system that prevents spammers from sending messages on behalf of your domain. It does this by telling the receiving mail server which IP addresses are allowed to send email for your domain.</p>
+
+    <h2>🔧 How Does SPF Work?</h2>
+    <p>When someone receives an email from your domain, their mail server checks your DNS record for an SPF entry. If the email is sent from an authorized server listed in the SPF record, it passes. Otherwise, it may be marked as spam or rejected.</p>
+
+    <h2>🧬 SPF Record Example</h2>
+    <pre>
+    v=spf1 include:zoho.com include:spf.protection.outlook.com -all
+    </pre>
+
+    <ul>
+      <li><code>v=spf1</code>: Indicates it's an SPF version 1 record</li>
+      <li><code>include:</code>: Allows trusted third-party email services</li>
+      <li><code>-all</code>: Reject all other sources not listed</li>
+    </ul>
+
+    <h2>⚙️ How to Set It Up</h2>
+    <ol>
+      <li>Log in to your DNS host (like Cloudflare, GoDaddy, etc.)</li>
+      <li>Add a TXT record for your domain with the SPF string</li>
+      <li>Use tools like <a href="https://mxtoolbox.com/spf.aspx" target="_blank">MXToolbox SPF Checker</a> to test</li>
+    </ol>
+
+    <h2>🚫 Common Mistakes</h2>
+    <ul>
+      <li>Too many includes (limit is 10 DNS lookups)</li>
+      <li>Missing SPF for subdomains</li>
+      <li>Incorrect syntax in the record</li>
+    </ul>
+
+    <blockquote>
+      "SPF alone won’t stop spoofing — but it’s the foundation. Combine it with DKIM and DMARC for full protection."
+    </blockquote>
+
+    <div class="related-posts">
+      <h3>📚 Related Articles</h3>
+      <ul>
+        <li><a href="dmarc-email-security.html">What is DMARC and Why It Matters</a></li>
+        <li><a href="pgp-vs-smime.html">PGP vs S/MIME: Which One Should You Use?</a></li>
+        <li><a href="how-secure-is-your-email.html">How Secure Is Your Email?</a></li>
+      </ul>
+    </div>
+
+    <a href="index.html#blogs" class="read-more">← Back to all articles</a>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SecureEmail.blog • <a href="terms.html">Terms</a> • <a href="privacy.html">Privacy</a></p>
+      <p>Contact: <a href="mailto:support.secureemail@millionaire.email">support.secureemail@millionaire.email</a></p>
+    </div>
+  </footer>
+</body>
+</html>
