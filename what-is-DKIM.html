@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Understand what DKIM (DomainKeys Identified Mail) is, how it protects your email, and how to set it up to prevent email spoofing." />
+  <meta name="keywords" content="DKIM, DomainKeys Identified Mail, email authentication, secure email, spoofing, digital signature" />
+  <meta name="author" content="Mithun" />
+  <title>What is DKIM and How to Set It Up for Email Security</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/36c63d_050e5a885a20405cb3462c2593d18ce0~mv2.png" />
+  <style>
+    h1, h2, h3 { color: #00ffd5; }
+    a { color: #79afff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { width: 100%; max-width: 700px; margin: 20px auto; display: block; }
+    .credit { font-size: 0.9em; color: #aaa; text-align: center; }
+    ul { padding-left: 20px; }
+    pre {
+      background: #111;
+      color: #79afff;
+      padding: 1em;
+      border: 1px solid #444;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <header class="sticky-nav">
+    <div class="container nav">
+      <a href="index.html" class="logo-text">@SecureEmail</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#blogs">Articles</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container blog-post">
+    <h1>What is DKIM and How to Set It Up for Email Security</h1>
+    <p class="author">By Mithun • Published on June 30, 2025</p>
+
+    <img src="https://static.wixstatic.com/media/36c63d_5e20d04e24f24de5b6df02ae7e36f332~mv2.png" alt="DKIM digital signature concept">
+    <p class="credit">Image credit: millionaire.email</p>
+
+    <p><strong>DKIM (DomainKeys Identified Mail)</strong> is one of the most powerful tools for email authentication. It protects email senders and recipients from forged addresses and tampering during transit.</p>
+
+    <h2>🔐 What is DKIM?</h2>
+    <p>DKIM adds a digital signature to the email header. This signature is created using a private key and verified using a public key published in your DNS. When the recipient’s server receives the message, it verifies the DKIM signature to ensure the content wasn’t altered and is really from you.</p>
+
+    <h2>🧬 Example DKIM Record</h2>
+    <pre>
+    default._domainkey.yourdomain.com IN TXT "v=DKIM1; k=rsa; p=MIGfMA0G...IDAQAB"
+    </pre>
+
+    <ul>
+      <li><code>default</code>: selector name</li>
+      <li><code>_domainkey</code>: required suffix</li>
+      <li><code>p=</code>: your public key</li>
+    </ul>
+
+    <h2>⚙️ How to Set Up DKIM</h2>
+    <ol>
+      <li>Generate a DKIM key pair (private and public)</li>
+      <li>Add the public key to your DNS as a TXT record</li>
+      <li>Configure your mail server to sign outgoing emails with the private key</li>
+      <li>Test using <a href="https://dkimcore.org/tools/keycheck.html" target="_blank">DKIM Core Key Checker</a></li>
+    </ol>
+
+    <h2>✅ Benefits of DKIM</h2>
+    <ul>
+      <li>Authenticates the email source</li>
+      <li>Improves deliverability</li>
+      <li>Works with SPF and DMARC for layered security</li>
+    </ul>
+
+    <h2>🚫 Common DKIM Pitfalls</h2>
+    <ul>
+      <li>Misconfigured DNS record (wrong key format or selector)</li>
+      <li>Too long TXT records (split them if needed)</li>
+      <li>Using the same DKIM key for multiple domains</li>
+    </ul>
+
+    <blockquote>
+      "DKIM is not just about security — it’s about trust in every email you send."
+    </blockquote>
+
+    <div class="related-posts">
+      <h3>📚 Related Articles</h3>
+      <ul>
+        <li><a href="spf-email-authentication.html">What is SPF in Email and How to Set It Up</a></li>
+        <li><a href="dmarc-email-security.html">What is DMARC and Why It Matters</a></li>
+        <li><a href="how-secure-is-your-email.html">How Secure Is Your Email?</a></li>
+      </ul>
+    </div>
+
+    <a href="index.html#blogs" class="read-more">← Back to all articles</a>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SecureEmail.blog • <a href="terms.html">Terms</a> • <a href="privacy.html">Privacy</a></p>
+      <p>Contact: <a href="mailto:support.secureemail@millionaire.email">support.secureemail@millionaire.email</a></p>
+    </div>
+  </footer>
+</body>
+</html>
