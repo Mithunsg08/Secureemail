@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn what DMARC is, why it's critical for email security, and how to set it up to protect your domain from spoofing and phishing." />
+  <meta name="keywords" content="DMARC, email authentication, email security, SPF, DKIM, spoofing protection, secure email" />
+  <meta name="author" content="Mithun" />
+  <title>What is DMARC and Why Your Domain Needs It</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/36c63d_050e5a885a20405cb3462c2593d18ce0~mv2.png" />
+  <style>
+    h1, h2, h3 { color: #00ffd5; }
+    a { color: #79afff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { width: 100%; max-width: 700px; margin: 20px auto; display: block; }
+    .credit { font-size: 0.9em; color: #aaa; text-align: center; }
+    ul { padding-left: 20px; }
+  </style>
+</head>
+<body>
+  <header class="sticky-nav">
+    <div class="container nav">
+      <a href="index.html" class="logo-text">@SecureEmail</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#blogs">Articles</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container blog-post">
+    <h1>What is DMARC and Why Your Domain Needs It</h1>
+    <p class="author">By Mithun • Published on June 30, 2025</p>
+
+    <img src="https://static.wixstatic.com/media/36c63d_49d814e3c2fc4252a0a6ef90fc017180~mv2.png" alt="DMARC explained diagram">
+    <p class="credit">Image credit: millionaire.email</p>
+
+    <p>Have you ever received an email that looked like it came from your bank—but wasn't? That’s spoofing. DMARC helps stop that.</p>
+
+    <h2>🔒 What is DMARC?</h2>
+    <p><strong>DMARC</strong> (Domain-based Message Authentication, Reporting, and Conformance) is an email authentication protocol that works with SPF and DKIM to prevent spoofed or fraudulent emails from being delivered using your domain name.</p>
+
+    <h2>🛡️ Why DMARC Matters</h2>
+    <ul>
+      <li><strong>Protects your brand</strong> from impersonation and phishing.</li>
+      <li><strong>Improves email deliverability</strong> by proving you're legitimate.</li>
+      <li><strong>Reduces spam</strong> sent from your domain.</li>
+    </ul>
+
+    <h2>🧩 How It Works</h2>
+    <p>DMARC uses two protocols — <a href="https://dmarc.org/overview/" target="_blank">SPF</a> (Sender Policy Framework) and <a href="https://www.dkim.org/" target="_blank">DKIM</a> (DomainKeys Identified Mail) — to check if an email is really from your domain. Then it tells the recipient's server what to do if the checks fail.</p>
+
+    <h2>📈 DMARC Record Example</h2>
+    <pre style="background:#111;padding:1em;border:1px solid #444;color:#79afff;">
+    v=DMARC1; p=quarantine; rua=mailto:admin@yourdomain.com;
+    </pre>
+
+    <ul>
+      <li><code>p=none</code>: Monitor only</li>
+      <li><code>p=quarantine</code>: Move suspicious emails to spam</li>
+      <li><code>p=reject</code>: Block emails that fail authentication</li>
+    </ul>
+
+    <h2>⚙️ How to Set It Up</h2>
+    <ol>
+      <li>Ensure SPF and DKIM are configured correctly for your domain.</li>
+      <li>Create a DMARC record in your DNS provider.</li>
+      <li>Start with <code>p=none</code> to monitor, then tighten to <code>quarantine</code> or <code>reject</code>.</li>
+      <li>Use tools like <a href="https://mxtoolbox.com/DMARC.aspx" target="_blank">MXToolbox</a> to test.</li>
+    </ol>
+
+    <h2>💡 Pro Tip</h2>
+    <p>Use <strong>DMARC reports</strong> (rua) to monitor who is sending on behalf of your domain. This helps identify unauthorized sources.</p>
+
+    <blockquote>
+      "DMARC is not optional in 2025. It’s the minimum standard for secure email."
+    </blockquote>
+
+    <div class="related-posts">
+      <h3>📚 Related Articles</h3>
+      <ul>
+        <li><a href="pgp-vs-smime.html">PGP vs S/MIME: Which One Should You Use?</a></li>
+        <li><a href="how-secure-is-your-email.html">How Secure Is Your Email?</a></li>
+        <li><a href="what-is-secure-email.html">What is Secure Email?</a></li>
+      </ul>
+    </div>
+
+    <a href="index.html#blogs" class="read-more">← Back to all articles</a>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 SecureEmail.blog • <a href="terms.html">Terms</a> • <a href="privacy.html">Privacy</a></p>
+      <p>Contact: <a href="mailto:support.secureemail@millionaire.email">support.secureemail@millionaire.email</a></p>
+    </div>
+  </footer>
+</body>
+</html>
