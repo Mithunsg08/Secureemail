@@ -31,6 +31,15 @@
 <url>
     <loc>https://www.secureemail.blog/identity-verified-email.html</loc>
   </url>
+  <url>
+    <loc>https://www.secureemail.blog/dmarc-email-security.html</loc>
+  </url>
+  <url>
+    <loc>https://www.secureemail.blog/what-is-spf.html</loc>
+  </url>
+  <url>
+    <loc>https://www.secureemail.blog/what-is-DKIM.html</loc>
+  </url>
 
 
   <!-- Static Pages -->
