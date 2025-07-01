@@ -1,0 +1,98 @@
+# Wrap the HTML report content inside the user's custom HTML blog layout
+
+custom_html_template = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Millionaire.email vs ProtonMail vs Gmail vs Tuta — 2025 Email Security Comparison Report with Proofs." />
+  <meta name="keywords" content="email security, dmarc, dnssec, MTA-STS, TLS, spoofing protection, secure email providers, S/MIME" />
+  <meta name="author" content="Bharath" />
+  <title>2025 Secure Email Showdown: Millionaire.email vs ProtonMail vs Gmail vs Tuta</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="https://static.wixstatic.com/media/36c63d_050e5a885a20405cb3462c2593d18ce0~mv2.png" />
+  <style>
+    body {{
+      font-family: 'JetBrains Mono', monospace;
+      background: #0a0a0a;
+      color: #f1f1f1;
+      padding: 20px;
+    }}
+    h1, h2, h3, h4 {{
+      color: #00ffd5;
+    }}
+    a {{
+      color: #79afff;
+    }}
+    a:hover {{
+      text-decoration: underline;
+    }}
+    table {{
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }}
+    th, td {{
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: left;
+    }}
+    th {{
+      background-color: #111;
+    }}
+    .author {{
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 1rem;
+    }}
+    .credit {{
+      font-size: 0.8em;
+      color: #888;
+      text-align: center;
+    }}
+  </style>
+</head>
+<body>
+
+  <header class="sticky-nav">
+    <div class="container nav">
+      <a href="index.html" class="logo-text">@SecureEmail</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#blogs">Articles</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>2025 Secure Email Showdown: Millionaire.email vs ProtonMail vs Gmail vs Tuta</h1>
+    <p class="author">By Bharath • Published July 1, 2025</p>
+
+    {report_body}
+
+    <a href="index.html#blogs" class="read-more">← Back to all articles</a>
+  </main>
+
+  <footer>
+    <hr />
+    <p style="font-size: 0.8rem;">&copy; 2025 SecureEmail.blog • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></p>
+    <p style="font-size: 0.8rem;">Contact: <a href="mailto:support.secureemail@millionaire.email">support.secureemail@millionaire.email</a></p>
+  </footer>
+
+</body>
+</html>
+"""
+
+# Insert the previously converted HTML report body into this layout
+full_html_content = custom_html_template.format(report_body=html_output)
+
+# Save the final integrated HTML blog page
+final_html_path = Path("/mnt/data/secure_email_comparison_2025.html")
+final_html_path.write_text(full_html_content, encoding='utf-8')
+
+final_html_path.name
