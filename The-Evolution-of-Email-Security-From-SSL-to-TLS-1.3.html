@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Explore the evolution of email security — from the early days of SSL to the modern protection of TLS 1.3." />
+  <meta name="keywords" content="email security, SSL, TLS, TLS 1.3, encryption, secure email, privacy" />
+  <meta name="author" content="Bharath" />
+  <title>The Evolution of Email Security: From SSL to TLS 1.3</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="https://static.wixstatic.com/media/36c63d_050e5a885a20405cb3462c2593d18ce0~mv2.png" href="favicon.png" />
+  <style>
+    body {
+      font-family: 'JetBrains Mono', monospace;
+      background: #0a0a0a;
+      color: #f1f1f1;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #00ffd5;
+    }
+    a {
+      color: #79afff;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      display: block;
+    }
+    .author {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 1rem;
+    }
+    .read-more {
+      display: inline-block;
+      margin-top: 30px;
+      color: #00ffd5;
+    }
+    .credit {
+      font-size: 0.8em;
+      color: #888;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="sticky-nav">
+    <div class="container nav">
+      <a href="index.html" class="logo-text">@SecureEmail</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#blogs">Articles</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>The Evolution of Email Security: From SSL to TLS 1.3</h1>
+    <p class="author">By Bharath • Published on September 13, 2025</p>
+
+    <img src="https://www.globalsign.com/application/files/1216/2149/3756/email-security.jpg" alt="Email encryption security illustration" />
+    <p class="credit">Image credit: globalsign.com</p>
+
+    <p>Email has become the backbone of our digital lives. But for decades, email security has struggled to keep up with growing cyber threats. Let’s explore how encryption standards evolved from <strong>SSL</strong> to <strong>TLS 1.3</strong>, making email safer than ever before.</p>
+
+    <h2>📩 The Early Days: SSL (Secure Sockets Layer)</h2>
+    <p>SSL, introduced in the mid-1990s, was the first widely adopted protocol that encrypted communication between web browsers and servers. While revolutionary at the time, SSL suffered from weak cryptography, outdated cipher suites, and implementation flaws.</p>
+    <ul>
+      <li>✅ First step toward encrypted email connections (POP3S, IMAPS, SMTPS).</li>
+      <li>❌ Vulnerable to attacks like POODLE, BEAST, and Heartbleed.</li>
+    </ul>
+
+    <h2>🔐 The Shift to TLS (Transport Layer Security)</h2>
+    <p>In 1999, TLS replaced SSL to address its weaknesses. Over time, different versions improved security:</p>
+    <ul>
+      <li><strong>TLS 1.0 & 1.1:</strong> Better than SSL but now deprecated due to vulnerabilities.</li>
+      <li><strong>TLS 1.2:</strong> Introduced modern cryptography (AES, SHA-256) and became the standard for secure email transport.</li>
+    </ul>
+    <p>Most secure email providers adopted TLS 1.2 for SMTP, POP3, and IMAP, making encrypted mail transfer the default.</p>
+
+    <h2>⚡ TLS 1.3: The New Standard</h2>
+    <p>Released in 2018, TLS 1.3 dramatically improved speed and security. It simplified the handshake process, removed insecure algorithms, and provided stronger forward secrecy.</p>
+    <ul>
+      <li>✅ Faster handshakes (fewer round-trips).</li>
+      <li>✅ Eliminated outdated algorithms like RSA key exchange.</li>
+      <li>✅ Mandatory forward secrecy with ephemeral keys.</li>
+      <li>✅ Default support for modern ciphers (AES-GCM, ChaCha20-Poly1305).</li>
+    </ul>
+
+    <h2>📊 SSL vs TLS: Quick Comparison</h2>
+    <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; margin: 20px 0; width: 100%; color: #f1f1f1;">
+      <tr style="background:#111;">
+        <th>Feature</th>
+        <th>SSL</th>
+        <th>TLS 1.3</th>
+      </tr>
+      <tr>
+        <td>Introduced</td>
+        <td>1995</td>
+        <td>2018</td>
+      </tr>
+      <tr>
+        <td>Handshake Speed</td>
+        <td>Slow</td>
+        <td>Faster (1-RTT)</td>
+      </tr>
+      <tr>
+        <td>Encryption Strength</td>
+        <td>Weak (obsolete)</td>
+        <td>Modern AES-GCM / ChaCha20</td>
+      </tr>
+      <tr>
+        <td>Forward Secrecy</td>
+        <td>No</td>
+        <td>Yes (mandatory)</td>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td>Deprecated</td>
+        <td>Recommended</td>
+      </tr>
+    </table>
+
+    <h2>🛠️ What This Means for Your Inbox</h2>
+    <p>Today, most major email providers — including Gmail, Outlook, Proton, and Tuta — use TLS 1.2+ for secure message transfer. However, support for TLS 1.3 ensures stronger protection against surveillance and interception.</p>
+    <p>If your provider still supports SSL or outdated TLS versions, it’s a red flag. You should immediately consider switching to a secure email service.</p>
+
+    <h2>💡 Final Thoughts</h2>
+    <p>The journey from SSL to TLS 1.3 shows how email security has evolved — but it also reminds us that <strong>security is never static</strong>. New threats demand continuous updates. By choosing a provider that enforces TLS 1.3, you ensure your messages travel with maximum protection.</p>
+
+    <blockquote>
+      “Email security is not a luxury — it’s the foundation of digital trust.” – SecureEmail.blog
+    </blockquote>
+
+    <a href="index.html#blogs" class="read-more">← Back to all articles</a>
+  </main>
+
+  <footer>
+    <hr />
+    <p style="font-size: 0.8rem;">&copy; 2025 SecureEmail.blog • <a href="privacy.html">Privacy</a> • <a href="terms.html">Terms</a></p>
+    <p style="font-size: 0.8rem;">Contact: <a href="mailto:support.secureemail@millionaire.email">support.secureemail@millionaire.email</a></p>
+  </footer>
+
+</body>
+</html>
